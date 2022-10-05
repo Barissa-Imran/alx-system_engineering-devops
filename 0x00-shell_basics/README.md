@@ -41,3 +41,5 @@
 `102-tree` - Creates multiple directories.
 
 `103-commas` - List files in commas.
+
+`school.mgc` - Detects school data files.
