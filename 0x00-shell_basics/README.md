@@ -10,3 +10,8 @@
 `3-listfiles` - Display current directory in a long format
 
 `4-listmorefiles` - Display the current directory contents, including hidden files (starting with `.`).
+
+`5-listfilesdigitonly` - Display current directory contents.
+* long format
+* with user and group IDs displayed numerically
+* And hidden files (starting with `.`)
