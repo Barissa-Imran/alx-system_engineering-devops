@@ -18,3 +18,7 @@
 * Owner: no permission at all
 * Group:no permission at all
 * Other users: all the permissions
+
+`9-John_Doe` - Sets the mode of the file hello to:
+
+`-rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello`
