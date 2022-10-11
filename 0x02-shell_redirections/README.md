@@ -40,3 +40,5 @@ Below is an explanation of what each file does (description).
 
 `18-letteronly` - Display all the lies of the file `/etc/ssh/sshd_config` starting with a letter.
 * Include capital letters
+
+`19-AZ` - Replace all characters `A` and `C` from input to `Z` and `e` respectively.
