@@ -44,3 +44,7 @@ Below is an explanation of what each file does (description).
 `19-AZ` - Replace all characters `A` and `C` from input to `Z` and `e` respectively.
 
 `20-hiago` - Script that removes all letters `c` and `C` from input.
+
+`21-reverse` - Script that reverse its input.
+
+
