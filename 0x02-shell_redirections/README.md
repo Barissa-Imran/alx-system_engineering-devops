@@ -25,3 +25,5 @@ Below is an explanation of what each file does (description).
 `10-no_more_js` - Deletes all the regular files (not the directories) with a `.js`extension that present in the current directory and all its subfolders.
 
 `11-directories` - Counts the number of directories and sub-directories in the current directory.
+
+`12-newest_files` - Displays the 10 newest files in the current directory.
