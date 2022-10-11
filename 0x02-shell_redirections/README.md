@@ -64,4 +64,5 @@ Below is an explanation of what each file does (description).
 * One file name per line
 * The listing should end with a new line
 
-`102`
+`102-acrostic` - Decodes acrostics that use the first letter of each line.
+* decoded line has to end with a new line
