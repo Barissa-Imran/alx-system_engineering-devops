@@ -15,3 +15,5 @@ Below is an explanation of what each file does (description).
 `5-firstlines` - Display the first 10 lines of `/etc/passwd`.
 
 `6-third_line` - Displays the third line of the file `iacta`.
+
+`7-file` Creates a file named named \*\\'"Best School"\'\\*$\?\*\*\*\*\*\*:) containing the text `Best School` ending by a new line.
