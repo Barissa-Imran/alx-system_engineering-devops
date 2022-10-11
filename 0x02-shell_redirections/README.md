@@ -49,3 +49,9 @@ Below is an explanation of what each file does (description).
 
 `22-users_and_homes` - Displays all users and their home directories, sorted by users.
 * Based on the `/etc/passwd` file
+
+`100-empty_casks` - Finds all empty files and directories in the current directory and all sub-directories.
+* Display only the names of the files and directories (not the entire path)
+* Lists hidden files
+* One file name per line
+* Listing ends with a new line
