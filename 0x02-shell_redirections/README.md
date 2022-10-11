@@ -29,3 +29,5 @@ Below is an explanation of what each file does (description).
 `12-newest_files` - Displays the 10 newest files in the current directory.
 
 `13-unique` - Takes list of words as input and prints only words that appear exactly once.
+
+`14-findthatword` - Display lines containing the pattern `root` from the file `/etc/passwd`.
