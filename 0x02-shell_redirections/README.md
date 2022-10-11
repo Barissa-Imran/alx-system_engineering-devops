@@ -66,3 +66,6 @@ Below is an explanation of what each file does (description).
 
 `102-acrostic` - Decodes acrostics that use the first letter of each line.
 * decoded line has to end with a new line
+
+`103-the_biggest_fan` - Parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
+* Order by number of requests, most active host or IP at the top
