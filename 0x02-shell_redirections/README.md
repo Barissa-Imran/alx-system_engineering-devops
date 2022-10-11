@@ -37,3 +37,6 @@ Below is an explanation of what each file does (description).
 `16-whatsnext` - Displays lines containing the pattern "root" and 3 lines after them in file `/etc/passwd`.
 
 `17-hidethisword` - Displays all the lines in the file `/etc/passwd` that do not contain "bin".
+
+`18-letteronly` - Display all the lies of the file `/etc/ssh/sshd_config` starting with a letter.
+* Include capital letters
