@@ -55,3 +55,13 @@ Below is an explanation of what each file does (description).
 * Lists hidden files
 * One file name per line
 * Listing ends with a new line
+
+`101-gifs` - Lists all the files with a `.gif` extension in the current directory and all its sub-directories.
+* Hidden files should not listed
+* Only regular files (not directories) should be listed
+* The names of the files should be displayed without their extensions
+* The files should be sorted by byte values, but case-insensitive (file `aaa` should be listed before file `bbb`, file `.b` should be listed before file `a`, and file `Rona` should be listed after file `jay`)
+* One file name per line
+* The listing should end with a new line
+
+`102`
