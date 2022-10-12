@@ -23,3 +23,5 @@ Find file names and descriptions as to what they do.
 `7-create_global_variable` - Creates a new global variable.
 * Name: `BEST`
 * Value: `School`
+
+`8-true_knowledge` - Prints the result of the additio of 128 with the value stored in the environment variable `TRUEKNOWLEDGE`, followed by a new line.
