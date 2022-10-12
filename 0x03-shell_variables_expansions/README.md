@@ -42,3 +42,5 @@ Find file names and descriptions as to what they do.
 
 `13-print_float` - Print a number with two decimal places, follwed by a new line.
 * The number will be stored in the environment variable `NUM`.
+
+`100-decimal_to_hexadecimal` - Converts a number from base 10 to base 16.
