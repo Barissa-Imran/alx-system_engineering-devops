@@ -44,3 +44,5 @@ Find file names and descriptions as to what they do.
 * The number will be stored in the environment variable `NUM`.
 
 `100-decimal_to_hexadecimal` - Converts a number from base 10 to base 16.
+
+`101-rot13` - Encodes and decodes text using the rot13 encryption. Assume ASCII.
