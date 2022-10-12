@@ -48,3 +48,8 @@ Find file names and descriptions as to what they do.
 `101-rot13` - Encodes and decodes text using the rot13 encryption. Assume ASCII.
 
 `102-odd` - Prints every other line from the input, starting with the first line.
+
+`103-water_and_stir` - Script that add the two numbers stored in the environment variables `WATER` and `STIR` and prints the result.
+* `WATER` is in base `water`
+* `STIR` is in base `stir`.
+* The result should be in base `bestchol`.
