@@ -19,3 +19,7 @@ Find file names and descriptions as to what they do.
 `6-create_local_variable` - Creates a new local variable.
 * Name: `BEST`
 * Value: `School`
+
+`7-create_global_variable` - Creates a new global variable.
+* Name: `BEST`
+* Value: `School`
