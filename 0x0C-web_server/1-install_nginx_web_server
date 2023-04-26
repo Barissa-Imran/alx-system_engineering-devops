@@ -5,8 +5,14 @@
 # GET request (requesting a page) using curl,
 # it must return a page that contains the string Hello World!
 
-apt-get -y update
-apt-get -y install nginx
+sudo apt-get update -y
+sudo apt-get install nginx -y
+
+# Allow nginx on firewall
 ufw allow 'Nginx HTTP'
+
+# create new index
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+
+# start nginx
 service nginx start
