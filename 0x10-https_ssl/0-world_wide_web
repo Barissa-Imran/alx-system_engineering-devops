@@ -8,7 +8,7 @@ function subdomain_check {
 function domain_check {
     domain_names=("www" "lb-01" "web-01" "web-02")
 
-    for i in "${domain_name[@]}";
+    for i in "${domain_names[@]}";
     do
         dig "${i}"."$1" | grep -A1 'ANSWER SECTION:' | \
         awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var $4, $5}' var="$i"
