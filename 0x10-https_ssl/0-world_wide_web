@@ -6,7 +6,7 @@ function subdomain_check {
 }
 
 function domain_check {
-    domain_names = ("www" "lb-01" "web-01" "web-02")
+    domain_names=("www" "lb-01" "web-01" "web-02")
 
     for i in "${domain_name[@]}";
     do
