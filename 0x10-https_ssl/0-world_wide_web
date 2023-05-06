@@ -1,27 +1,37 @@
 #!/usr/bin/env bash
 # Bash script that displays information about subdomains.
 
-function domain_check {
-    domain_names=("www" "lb-01" "web-01" "web-02")
-
-    for i in "${domain_names[@]}";
-    do
-        dig "${i}"."$1" | grep -A1 'ANSWER SECTION:' | \
-        awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var $4, $5}' var="$i"
-    done
+function get_record_type() {
+  local output=$(dig $1.$2 | grep -A1 'ANSWER SECTION:')
+  if echo "$output" | grep -q 'CNAME'; then
+    echo "CNAME"
+  else
+    echo "A"
+  fi
 }
 
-function subdomain_check {
-    dig "${2}"."$1" | grep -A1 'ANSWER SECTION:' | \
-    awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var $4, $5}' var="$2"
+function get_destination() {
+  local output=$(dig $1.$2 | grep -A1 'ANSWER SECTION:')
+  local ip=$(echo "$output" | grep 'IN A ' | awk '{print $5}')
+  if [ -z "$ip" ]; then
+    local cname=$(echo "$output" | grep 'IN CNAME ' | awk '{print $5}')
+    echo "$cname"
+  else
+    echo "$ip"
+  fi
 }
 
-if [ $# -lt 1 ]
-then
-    echo "*** Provide domain name ***"
-elif [ $# -eq 1 ]
-then
-    domain_check "$1";
+if [ $# -eq 1 ]; then
+  domain=$1
+  subdomains=(www lb-01 web-01 web-02)
 else
-    subdomain_check "$1" "$2";
+  domain=$1
+  subdomains=($2)
 fi
+
+for subdomain in "${subdomains[@]}"
+do
+  record_type=$(get_record_type $subdomain $domain)
+  destination=$(get_destination $subdomain $domain)
+  echo "The subdomain $subdomain is a $record_type record and points to $destination"
+done
