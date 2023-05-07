@@ -38,23 +38,26 @@
 
 # rewritten code so that it shows IP
 
-if [[ $# -lt 1 ]]; then
+if [ $# -eq 0 ]; then
   echo "Usage: $0 domain [subdomain]"
   exit 1
 fi
 
 domain=$1
-subdomain=$2
+subdomain=${2:-"www lb-01 web-01 web-02"}
 
-if [[ -z "$subdomain" ]]; then
-  subdomains=(www lb-01 web-01 web-02)
-else
-  subdomains=($subdomain)
-fi
+function get_record_type() {
+  local output=$(dig $1.$2 | grep -A1 'ANSWER SECTION:')
+  if echo "$output" | grep -q 'CNAME'; then
+    echo "CNAME"
+  else
+    echo "A"
+  fi
+}
 
-for sub in "${subdomains[@]}"; do
-  record_type=$(dig +short "$sub.$domain" | awk 'NR==1{print $1}')
-  destination=$(dig +short "$sub.$domain" | awk 'NR==1{print $2}')
-
-  echo "The subdomain $sub is a $record_type record and points to $destination"
+for s in $subdomain; do
+  dest=$(dig +short $s.$domain | awk '{print $1}')
+#   record=$(dig +short $s.$domain | awk '{print $4}')
+  record=$(get_record_type $subdomain $domain)
+  echo "The subdomain $s is a $record record and points to $dest"
 done
